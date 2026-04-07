@@ -1,0 +1,1524 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 30px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+section{
+  margin-bottom: 20px;
+}
+
+
+
+
+.tarjeta{
+  margin: 15px 5px ;
+  position: initial;
+}
+
+
+.card-link{
+  display: block;
+  text-align: left;
+}
+
+.tarjeta{
+  position: initial;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-cuerpo{
+  padding: 10px ;
+  text-align: left;  
+}
+
+.card-link{
+  display: block;
+  text-align: center;
+}
+
+/* LOGIN - Sabor Andino */
+
+/* Fondo con overlay oscuro sobre la imagen */
+.login-fondo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Tarjeta blanca central */
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Título Sabor Andino */
+.login-titulo {
+  color: #B71C1C;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Tabs Ingresar / Registrarse */
+.login-tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #B71C1C;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.login-tab-btn {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.login-tab-btn.activo {
+  background: #B71C1C;
+  color: #fff;
+}
+
+.login-tab-btn.inactivo {
+  background: #fff;
+  color: #B71C1C;
+}
+
+/* Botones de rol Cliente / Admin */
+.login-rol-btn {
+  flex: 1;
+  border-radius: 10px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-rol-btn.activo {
+  border: 2px solid #B71C1C !important;
+  background: #B71C1C !important;
+  color: #fff !important;
+}
+
+.login-rol-btn.inactivo {
+  border: 2px solid #ddd !important;
+  background: #fff !important;
+  color: #555 !important;
+}
+
+.login-rol-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Botón principal rojo */
+.login-btn-primary {
+  background: #B71C1C !important;
+  color: #fff !important;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn-primary:hover {
+  background: #c62828 !important;
+}
+
+/* Link rojo (olvidaste contraseña, regístrate) */
+.login-link {
+  color: #B71C1C;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Pie de la tarjeta */
+.login-footer {
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/*PANEL ADMIN - Sabor Andino*/
+
+/* Contenedor principal del panel */
+.admin-contenedor {
+  padding-bottom: 80px;
+}
+
+/* Header rojo del panel */
+.admin-header {
+  background: #B71C1C;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Título del header */
+.admin-header-titulo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Subtítulo del header */
+.admin-header-subtitulo {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+  /*  TARJETAS DE MÉTRICAS */
+
+/* Tarjeta individual de métrica */
+.admin-metrica-card {
+  border-radius: 12px !important;
+  border: none !important;
+  padding: 16px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Icono de la métrica */
+.admin-metrica-icono {
+  font-size: 24px;
+  margin-bottom: 4px;
+  
+}
+
+/* Número principal de la métrica */
+.admin-metrica-valor {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Etiqueta debajo del número */
+.admin-metrica-label {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Colores de fondo para cada métrica */
+.admin-metrica-ventas   {
+   background: #fff8e1; 
+  }
+.admin-metrica-pedidos  { 
+  background: #e8f5e9; 
+}
+.admin-metrica-reservas { 
+  background: #e3f2fd;
+ }
+.admin-metrica-mesas    { 
+  background: #fce4ec; 
+}
+
+  /* ISTA DE PEDIDOS RECIENTES */
+
+/* Tarjeta contenedora de la lista */
+.admin-pedidos-card {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Encabezado de la lista */
+.admin-pedidos-header {
+  background: #fafafa;
+  border-radius: 12px 12px 0 0 !important;
+  font-weight: bold;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Fila individual de pedido */
+.admin-pedido-fila {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* Número de pedido y mesa */
+.admin-pedido-titulo {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Descripción de los platos */
+.admin-pedido-descripcion {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+/* Total del pedido */
+.admin-pedido-total {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #B71C1C;
+}
+
+/* Badge de estado del pedido */
+.admin-estado-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Colores por estado */
+.admin-estado-preparacion {
+   background: #fff3e0; color: #e65100;
+   }
+.admin-estado-listo       { 
+  background: #e8f5e9; color: #2e7d32; 
+}
+.admin-estado-cancelado   { 
+  background: #ffebee; color: #c62828; 
+}
+.admin-estado-entregado   {
+   background: #e3f2fd; color: #1565c0; }
+
+/* TIMER PEDIDO - CompTimerPedido */
+
+/* Badge del timer */
+.timer-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* Timer con tiempo suficiente — naranja */
+.timer-normal {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+/* Timer con menos de 1 minuto — rojo */
+.timer-urgente {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Timer terminado — verde */
+.timer-listo {
+    background: #e8f5e9;
+    color: #2e7d32;
+  
+}
+
+/*BOTÓN CERRAR SESIÓN - AdminPanel*/
+
+/* Modo oscuro — ajusta cards y textos */
+.dark .admin-pedidos-card {
+  background-color: #2a2a2a !important;
+  color: #f0f0f0;
+}
+
+.dark .admin-pedidos-header {
+  background-color: #333 !important;
+  color: #f0f0f0;
+}
+
+.dark .admin-pedido-fila {
+  border-bottom: 1px solid #444;
+}
+
+.dark .admin-pedido-descripcion {
+  color: #aaa;
+}
+
+.dark .admin-metrica-label {
+  color: #aaa;
+}
+
+/* CONTENEDOR */
+.admin-contenedor {
+  background: #f5f5f5;
+  min-height: 100vh;
+  
+}
+footer{
+  margin-top: auto;
+}
+
+/* HEADER */
+.admin-header {
+  background: #b71c1c;
+  color: white;
+  padding: 12px;
+}
+
+/* BOTÓN VOLVER */
+.btn-volver {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* FILTROS */
+.filtro {
+  background: #eee;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.filtro.activo {
+  background: #b71c1c;
+  color: white;
+}
+
+/* TARJETA PEDIDO */
+.pedido-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* CLIENTE */
+.pedido-cliente {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ITEMS */
+.pedido-items {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* TOTAL */
+.pedido-total {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* BADGES */
+.badge-estado {
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.badge-preparacion {
+  background: orange;
+  color: white;
+}
+
+.badge-listo {
+  background: green;
+  color: white;
+}
+
+/* BOTÓN */
+.btn-gestionar {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+
+
+/* TEMA CLARO */
+.admin-contenedor.light {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+/* TEMA OSCURO  */
+.admin-contenedor.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* TARJETAS EN MODO OSCURO */
+.admin-contenedor.dark .card {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+}
+
+.admin-contenedor.dark .admin-header {
+  background-color: #8b0000; /* rojo oscuro */
+}
+
+.admin-contenedor.dark .admin-pedidos-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.admin-contenedor.dark .admin-metrica-label {
+  color: #ccc;
+}
+
+/*  BOTONES DE GESTIÓN DEL MODAL */
+
+/* Base de todos los botones de gestión */
+.btn-gestion {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* En Preparación — fondo naranja claro */
+.btn-gestion-preparacion {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* Listo — fondo verde claro */
+.btn-gestion-listo {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Entregado — fondo azul claro */
+.btn-gestion-entregado {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Cancelar — fondo rojo claro */
+.btn-gestion-cancelar {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Hover general para todos los botones de gestión */
+.btn-gestion:hover {
+  opacity: 0.85;
+}
+
+/* BADGES DE ESTADO EN AdminPedidos  */
+.badge-cancelado {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.badge-entregado {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/*  TEMA OSCURO - AdminPedido */
+
+.admin-contenedor.dark{
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.admin-contenedor.dark .pedido-card{
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #fff;
+}
+.admin-contenedor.dark .filtro{
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.admin-contenedor.dark .filtro.activo{
+  background-color: #8b0000;
+  border: none;
+}
+.admin-contenedor.dark .pedido-cliente{
+  color: #bbbbbb;
+}
+.admin-contenedor.dark hr{
+  border-color: #333;
+}
+.admin-contenedor.dark .btn-gestionar{
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+.admin-contenedor.dark .modal-content{
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* BARRA DE NAVEGACIÓN INFERIOR  */
+
+/* Contenedor fijo en la parte inferior */
+.navbar-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  z-index: 999;
+}
+
+/* Cada botón de la barra */
+.navbar-btn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #aaa;
+  padding: 4px 8px;
+}
+
+/* Botón activo — rojo */
+.navbar-btn.activo {
+  color: #b71c1c;
+}
+
+/* Icono del botón */
+.navbar-icono {
+  font-size: 20px;
+}
+
+/* Texto debajo del icono */
+.navbar-label {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* Modo oscuro de la barra */
+.dark .navbar-inferior {
+  background: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+.dark .navbar-btn {
+  color: #777;
+}
+
+.dark .navbar-btn.activo {
+  color: #ef9a9a;
+}
+
+/* GESTIÓN DE RESERVAS  */
+
+/* Tarjeta de cada reserva */
+.reserva-card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Nombre del cliente */
+.reserva-nombre {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Dato pequeño (teléfono) */
+.reserva-dato {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+/* Detalles: fecha, hora, personas, mesa */
+.reserva-detalles {
+  font-size: 12px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+/* Badges de estado */
+.reserva-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.reserva-badge-confirmada {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.reserva-badge-pendiente {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.reserva-badge-cancelada {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Botones de acción */
+.btn-reserva {
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-reserva-editar {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.btn-reserva-confirmar {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.btn-reserva-cancelar {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.btn-reserva:hover {
+  opacity: 0.85;
+}
+
+/* Label del formulario de edición */
+.reserva-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+/* Radio buttons del formulario */
+.reserva-radio {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Botón guardar cambios */
+.btn-reserva-guardar {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-reserva-guardar:hover {
+  background: #c62828;
+}
+
+/* Modo oscuro reservas */
+.dark .reserva-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .reserva-dato {
+  color: #aaa;
+}
+
+.dark .reserva-detalles {
+  color: #ccc;
+}
+
+.dark .reserva-label {
+  color: #ccc;
+}
+
+.mi-footer{
+  padding: 15px;
+  text-align: center;
+}
+.admin-contenedor footer .mi-footer{
+  background: #5f0303e5;
+  color: white;
+}
+ 
+/* GESTIÓN DE MESAS */
+
+/* Tarjeta de cada mesa */
+.mesa-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Imagen de la mesa */
+.mesa-img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Contenido de la tarjeta */
+.mesa-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Nombre de la mesa */
+.mesa-nombre {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Detalles de la mesa ocupada */
+.mesa-detalles {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Badge de estado */
+.mesa-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.mesa-badge-disponible { background: #e8f5e9; color: #2e7d32; }
+.mesa-badge-ocupada    { background: #ffebee; color: #c62828; }
+
+/* Botón lápiz editar */
+.mesa-btn-editar {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ===== MODAL DE MESA ===== */
+
+/* Caja de estado actual */
+.mesa-modal-estado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Datos del cliente en modal */
+.mesa-modal-datos p {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* Botón marcar como Ocupada — rojo */
+.mesa-btn-ocupar {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mesa-btn-ocupar:hover { background: #c62828; }
+
+/* Botón marcar como Disponible — verde */
+.mesa-btn-liberar {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mesa-btn-liberar:hover { background: #388e3c; }
+
+/* MODO OSCURO MESAS */
+
+.dark .mesa-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .mesa-detalles { color: #aaa; }
+
+.dark .mesa-modal-datos p { color: #ccc; }
+
+/*  MENÚ  */
+
+/* Botón agregar nuevo plato — ancho completo rojo */
+.menu-btn-nuevo {
+  width: 100%;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.menu-btn-nuevo:hover { background: #c62828; }
+
+/* Mensaje de retroalimentación */
+.menu-mensaje {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Grilla de 2 columnas para los platos */
+.menu-grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Tarjeta de cada plato */
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Contenedor de imagen con botón encima */
+.menu-img-contenedor {
+  position: relative;
+}
+
+/* Imagen del plato */
+.menu-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Botón Agregar encima de la imagen */
+.menu-btn-agregar-img {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(183, 28, 28, 0.85);
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.menu-btn-agregar-img:hover { background: #b71c1c; }
+
+/* Información del plato */
+.menu-info {
+  padding: 8px 10px;
+}
+
+/* Nombre del plato */
+.menu-nombre {
+  font-weight: bold;
+  font-size: 13px;
+  display: block;
+}
+
+/* Precio del plato */
+.menu-precio {
+  font-size: 12px;
+  color: #b71c1c;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Botón editar */
+.btn-menu-editar {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Botón eliminar */
+.btn-menu-eliminar {
+  background: #ffebee;
+  color: #c62828;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn-menu-editar:hover   { opacity: 0.85; }
+.btn-menu-eliminar:hover { opacity: 0.85; }
+
+/*  MODO OSCURO MENÚ */
+
+.dark .menu-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .menu-nombre { color: #fff; }
+.dark .menu-precio { color: #ef9a9a; }
+
+.dark .btn-menu-editar {
+  background: #0d2137;
+  color: #64b5f6;
+}
+
+.dark .btn-menu-eliminar {
+  background: #3e0d0d;
+  color: #ef9a9a;
+}
+
+.dark .menu-mensaje {
+  background: #1b3a1f;
+  color: #81c784;
+}
+
+/* CALENDARIO */
+
+/* Contenedor del calendario con imagen de fondo */
+.cal-contenedor {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Fondo del calendario */
+.cal-fondo {
+  background: rgba(230, 146, 68, 0.88);
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  border-radius: 12px;
+
+}
+
+/* Encabezado del mes */
+.cal-mes-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 6px;
+}
+.cal-mes-header span {
+  flex: 1;              
+  text-align: center;    
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.cal-mes-titulo {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Encabezados Dias */
+.cal-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 6px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 6px;
+  padding: 4px 0;
+}
+
+/* Grilla de días */
+.cal-grilla {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+/* Día base */
+.cal-dia {
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+  cursor: pointer;
+  margin: auto;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Día con reserva rojo */
+.cal-dia-reserva {
+  background: #b71c1c;
+  color: white;
+}
+
+/* Hover día con reserva rojo más claro */
+.cal-dia-reserva:hover {
+  background: #e57373;
+  transform: scale(1.1);
+}
+
+/* Día libre blanco semitransparente */
+.cal-dia-libre {
+  background: rgba(255,255,255,0.75);
+  color: #333;
+}
+
+/* Hover día libre  color más encendido */
+.cal-dia-libre:hover {
+  background: #ffccbc;
+  transform: scale(1.1);
+}
+
+/* Leyenda */
+.cal-leyenda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.8);
+  padding: 6px 10px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* Cuadrado rojo de la leyenda */
+.cal-leyenda-color {
+  width: 16px;
+  height: 16px;
+  background: #b71c1c;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Modo oscuro calendario */
+.dark .cal-fondo {
+  background: rgba(30,30,30,0.88);
+}
+
+.dark .cal-mes-header {
+  background: rgba(40,40,40,0.9);
+  color: #fff;
+}
+
+.dark .cal-semana {
+  background: rgba(40,40,40,0.8);
+  color: #ccc;
+}
+
+.dark .cal-dia-libre {
+  background: rgba(60,60,60,0.8);
+  color: #eee;
+}
+
+.dark .cal-dia-libre:hover {
+  background: #5d4037;
+}
+
+.dark .cal-leyenda {
+  background: rgba(40,40,40,0.85);
+  color: #ccc;
+}
+/* BOTÓN CERRAR SESIÓN */
+.btn-cerrar {
+  background: #f7f4f4;
+  color: rgb(10, 0, 0);
+  border: none;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cerrar:hover {
+  background: #e0dfdf;
+  transform: scale(1.05);
+}
+
+/* VISTA CLIENTE */
+
+/* Botón agregar plato en tarjeta */
+.cli-btn-agregar {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.cli-btn-agregar:hover { background: #c62828; }
+
+/* Botón perfil en header */
+.cli-btn-perfil {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Carrito flotante fijo en esquina inferior derecha */
+.cli-carrito-flotante {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cli-carrito-flotante:hover { background: #c62828; }
+
+/* Badge con cantidad de items */
+.cli-carrito-badge {
+  background: white;
+  color: #b71c1c;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Item dentro del carrito */
+.cli-item-carrito {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Imagen del item en carrito */
+.cli-item-img {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Info del item */
+.cli-item-info {
+  flex: 1;
+}
+
+/* Nombre del item */
+.cli-item-nombre {
+  font-weight: bold;
+  font-size: 13px;
+  display: block;
+}
+
+/* Precio unitario */
+.cli-item-precio {
+  font-size: 12px;
+  color: #777;
+  display: block;
+}
+
+/* Subtotal del item */
+.cli-item-subtotal {
+  font-weight: bold;
+  font-size: 13px;
+  color: #b71c1c;
+}
+
+/* Botones - y + de cantidad */
+.cli-btn-cantidad {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cli-btn-cantidad:hover { background: #e0e0e0; }
+
+/* Modo oscuro cliente */
+.dark .cli-item-carrito {
+  border-bottom: 1px solid #444;
+}
+
+.dark .cli-item-precio { color: #aaa; }
+
+.dark .cli-btn-cantidad {
+  background: #333;
+  border-color: #555;
+  color: #fff;
+}
+/*  RESERVAS CLIENTE */
+
+/* Tarjeta de reserva del cliente */
+.cli-reserva-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Nombre de la mesa */
+.cli-reserva-mesa {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Cantidad de personas */
+.cli-reserva-personas {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Fila de dato con icono */
+.cli-reserva-dato {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* Icono rojo de cada dato */
+.cli-reserva-icono-rojo {
+  font-size: 16px;
+}
+
+/* Label tipo de reserva */
+.cli-reserva-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Radio activo con borde verde */
+.cli-radio-activo {
+  border-color: #2e7d32 !important;
+  color: #2e7d32;
+}
+
+/* Botón cancelar reserva — rojo ancho completo */
+.cli-btn-cancelar-reserva {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cli-btn-cancelar-reserva:hover { background: #c62828; }
+
+/* Modo oscuro reservas cliente */
+.dark .cli-reserva-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .cli-reserva-personas { color: #aaa; }
+.dark .cli-reserva-label    { color: #ccc; }
+
+/*  MESAS CLIENTE  */
+
+/* Botón reservar mesa — rojo pequeño */
+.cli-btn-reservar-mesa {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cli-btn-reservar-mesa:hover { background: #c62828; }
+/* CALENDARIO CLIENTE */
+
+/* Botones < > para navegar meses */
+.cal-btn-mes {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  padding: 0 8px;
+}
+
+.cal-btn-mes:hover { color: #b71c1c; }
+
+/* Día con mi reserva  verde */
+.cal-dia-mia {
+  background: #2e7d32;
+  color: white;
+}
+
+.cal-dia-mia:hover {
+  background: #388e3c;
+  transform: scale(1.1);
+}
+
+/* Cuadro de leyenda verde */
+.cal-leyenda-color-mia {
+  width: 16px;
+  height: 16px;
+  background: #2e7d32;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Fila de icono rojo en modal */
+.cli-reserva-icono-rojo-fila {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+}
+
+/* Cuadro rojo del icono */
+.cli-icono-cuadro {
+  background: #b71c1c;
+  color: white;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+/* Botón Ver Clase — PROVISIONAL */
+.cli-btn-ver-clase {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.cli-btn-ver-clase:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Modo oscuro calendario cliente */
+.dark .cal-btn-mes { color: #ccc; }
+.dark .cal-btn-mes:hover { color: #ef9a9a; }
+
+.recetas-contenedor{
+  width: 90%;
+  margin: 0 auto;   /* centra */
+  padding: 10px 0 30px 0;
+}
