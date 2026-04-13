@@ -11,7 +11,6 @@ export function TemaProvider({ children }){
         setTema((prev)=> (prev==="lidht" ? "dark" : "lidht")
         );
     }
-
     return(
         <ContexTema.Provider value={{ tema, cambiarTema} }>
             <div className={tema}> {children} </div>

@@ -11,8 +11,11 @@ import { Suspense } from "react";
 
 const CompRecetaCard = React.lazy(() =>
   import("../../Componentes/CompRecetaCard")
+
 );
-// Datos simulados de platos del menú con las imágenes del proyecto
+
+
+// platos del menú con las imágenes
 const platosData = [
   { id: 1, nombre: "Lomo Saltado",    precio: 32.00, categoria: "Platos criollos",
   img: "/img/lomo saltado.png"       },
@@ -45,7 +48,7 @@ function carritoReducer(state, action) {
       const existe = state.carrito.find(i => i.id === action.payload.id);
 
       if (existe && existe.cantidad >= 5) {
-        alert("⚠️ Solo 5 unidades del mismo plato");
+        alert(" Solo 5 unidades del mismo plato");
         return state;
       }
 
@@ -60,7 +63,7 @@ function carritoReducer(state, action) {
       }
 
       if (state.carrito.length >= 5) {
-        alert("⚠️ Solo 5 platos diferentes en el pedido");
+        alert(" Solo 5 platos diferentes en el pedido");
         return state;
       }
 
@@ -137,17 +140,17 @@ function ClienteMenu({ vistaCliente, setVistaCliente, onLogout }) {
   const [state, dispatch] = useReducer(carritoReducer, estadoInicial);
   const carrito = state.carrito;
 
-  // Muestra mensaje y lo oculta en 2 segundos — igual que CompHooks useEffect con límite
+  // Muestra mensaje y lo oculta en 2 segundos  con límite
   useEffect(() => {
     if (mensaje) {
       const timer = setTimeout(() => setMensaje(""), 2000);
-      // Libera memoria igual que CompHooks
+      // Libera memoria 
       return () => clearTimeout(timer);
     }
   }, [mensaje]);
 
 
-    // useCallback igual que tu profe (optimiza llamada API)
+    // useCallback optimiza 
     const buscarRecetas = useCallback(async () => {
       if (!busqueda) return;
 
@@ -170,7 +173,7 @@ function ClienteMenu({ vistaCliente, setVistaCliente, onLogout }) {
       }
     }, [busqueda]);
 
-    // useMemo igual que tu profe (optimiza filtrado)
+    // useMemo optimiza filtrado
     const recetasFiltradas = useMemo(() => {
       return recetas;
     }, [recetas]);
@@ -515,6 +518,7 @@ const confirmarEliminar = () => {
 
     <Suspense fallback={<p>Cargando tarjetas...</p>}>
       <div className="row">
+
         {recetasFiltradas.map((meal) => (
           <CompRecetaCard key={meal.idMeal} meal={meal} />
         ))}
@@ -526,8 +530,6 @@ const confirmarEliminar = () => {
           <footer>
             <CompFooter />
           </footer>
-
-      {/* BARRA DE NAVEGACIÓN INFERIOR CLIENTE */}
       
       <CompNavBar vistaAdmin={vistaCliente} setVistaAdmin={setVistaCliente} esCliente={true} />
 

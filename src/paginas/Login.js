@@ -118,7 +118,7 @@ function Login({ onLogin }) {
             // FORMULARIO DE LOGIN
             <form onSubmit={handleLogin}>
 
-              {/* Texto encima de los botones de rol */}
+
               <p className="small text-muted mb-2">Ingresar como:</p>
 
               {/* Botones de rol: Cliente y Administrador

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-//importar los componentes
 
-            // PAGINAS
+// PAGINAS
 // página de Login
 import Login from './paginas/Login';
 // pagina admin

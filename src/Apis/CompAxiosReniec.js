@@ -12,18 +12,24 @@ function CompAxiosReniec(){
         setLoading(true); setError(null); setPerson(null);
         if (dni.length !== 8) {
             setError("El DNI debe tener 8 dígitos");
-            return
+            setLoading(false);
+         return;
     }
       try {
             const response = await axios.get
              (`https://graphperu.daustinn.com/api/query/${dni}` );
              setPerson(response.data);
               } catch (e) {
-            setError(e.message);
-        } finally {
+             if (e.response && e.response.status === 400) {
+                setError("No se encontraron resultados para este DNI");
+            } else {
+                setError("Ocurrió un error al consultar el servicio");
+            }
+        } 
+        finally {
             setLoading(false);
         }
-        
+    
     }
 
 return (

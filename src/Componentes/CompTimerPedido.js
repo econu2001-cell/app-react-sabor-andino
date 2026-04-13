@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 function CompTimerPedido({ segundos = 300 }) {
 
-    // Estado del contador —empieza en los segundos 
+    // Estado del contador empieza en los segundos 
     const [tiempoRestante, setTiempoRestante] = useState(segundos);
 
     // setInterval resta 1 cada segundo
@@ -16,7 +16,7 @@ function CompTimerPedido({ segundos = 300 }) {
             setTiempoRestante((prev) => prev - 1); // resta 1 cada segundo
         }, 1000);
 
-        // Libera memoria igual que CompHooks
+        // Libera memoria 
         return () => clearInterval(intervalo);
 
     }, [tiempoRestante]);
@@ -26,7 +26,7 @@ function CompTimerPedido({ segundos = 300 }) {
     const seg = tiempoRestante % 60;
     const formato = `${String(minutos).padStart(2, "0")}:${String(seg).padStart(2, "0")}`;
 
-    // Verde = listo | Rojo = menos de 1 min | Naranja = normal
+    // Verde listo - Rojo menos de 1 min - Naranja normal
     const clase =
         tiempoRestante <= 0  ? "timer-listo" :
         tiempoRestante <= 60 ? "timer-urgente" :

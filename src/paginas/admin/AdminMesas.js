@@ -244,7 +244,6 @@ function AdminMesas({ vistaAdmin, setVistaAdmin, onLogout, onVolver   }) {
            <CompFooter />
         </footer>
 
-      {/*  BARRA DE NAVEGACIÓN INFERIOR  */}
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
 
     </div>

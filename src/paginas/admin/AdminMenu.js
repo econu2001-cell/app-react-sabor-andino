@@ -3,7 +3,10 @@ import CompModal from "../../Componentes/CompModal";
 import CompNavBar from "../../Componentes/CompNavBar";
 import { useTema } from "../../Contex/ContexTema";
 import CompFooter from "../../Componentes/CompFooter";
-// Datos simulados de platos del menú con tus imágenes
+
+
+
+// Datos de platos del menú con tus imágenes
 const platosIniciales = [
   { id: 1, nombre: "Lomo Saltado",    precio: 32.00, categoria: "Platos criollos", img: "/img/lomo saltado.png"      },
   { id: 2, nombre: "Ají de Gallina",  precio: 28.00, categoria: "Platos criollos", img: "/img/Aji-de-gallina.png"    },
@@ -18,7 +21,6 @@ const platosIniciales = [
 
 function AdminMenu({ vistaAdmin, setVistaAdmin, onLogout, onVolver }) {
 
-  // Trae el tema actual igual que en AdminPanel
   const { tema, cambiarTema } = useTema();
 
   // Lista de platos — empieza con los datos simulados
@@ -197,7 +199,6 @@ function AdminMenu({ vistaAdmin, setVistaAdmin, onLogout, onVolver }) {
         </section>
 
         {/*SECTION MENSAJE RETROALIMENTACIÓN */}
-        {/* Solo aparece cuando se agrega un plato a pedidos */}
         {mensaje && (
           <section className="menu-mensaje">
             {mensaje}
@@ -380,7 +381,6 @@ function AdminMenu({ vistaAdmin, setVistaAdmin, onLogout, onVolver }) {
         />
       )}
 
-      {/* BARRA DE NAVEGACIÓN INFERIOR */}
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
 
     </div>

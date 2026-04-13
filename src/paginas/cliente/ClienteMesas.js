@@ -15,7 +15,6 @@ const mesasIniciales = [
 
 function ClienteMesas({ vistaCliente, setVistaCliente, onLogout, reservas, setReservas }) {
 
-  // Trae el tema actual
   const { tema, cambiarTema } = useTema();
 
   // Lista de mesas
@@ -36,11 +35,11 @@ function ClienteMesas({ vistaCliente, setVistaCliente, onLogout, reservas, setRe
     hora: "", personas: "", mesa: "", tipo: "presencial"
   });
 
-  // Oculta el mensaje en 2 segundos — mismo patrón useEffect de CompHooks
+  // Oculta el mensaje en 2 segundos
   useEffect(() => {
     if (mensaje) {
       const timer = setTimeout(() => setMensaje(""), 2000);
-      // Libera memoria igual que CompHooks
+      // Libera memoria
       return () => clearTimeout(timer);
     }
   }, [mensaje]);

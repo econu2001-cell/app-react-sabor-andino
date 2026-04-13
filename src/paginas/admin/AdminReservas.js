@@ -4,7 +4,7 @@ import CompNavBar from "../../Componentes/CompNavBar";
 import { useTema } from "../../Contex/ContexTema";
 import CompFooter from "../../Componentes/CompFooter";
 
-// Datos simulados de reservas del restaurante
+// Datos de reservas del restaurante
 const reservasIniciales = [
   {
     id: "001", cliente: "María González", telefono: "987654321",
@@ -33,16 +33,13 @@ const estadoClase = {
 function AdminReservas({ vistaAdmin, setVistaAdmin, onLogout, onVolver  }) {
 
   const { tema, cambiarTema } = useTema();
-  // Lista de reservas — empieza con los datos simulados
+  // Lista de reservas 
   const [reservas, setReservas] = useState(reservasIniciales);
 
-  // Filtro activo: Todas, Pendientes o Confirmadas
   const [filtro, setFiltro] = useState("Todas");
 
-  // Reserva seleccionada para editar — null = modal cerrado
   const [reservaEditar, setReservaEditar] = useState(null);
 
-  // Reserva seleccionada para cancelar — null = modal cerrado
   const [reservaCancelar, setReservaCancelar] = useState(null);
 
   // Guarda los datos del formulario de edición
@@ -170,7 +167,6 @@ function AdminReservas({ vistaAdmin, setVistaAdmin, onLogout, onVolver  }) {
               </span>
             </div>
 
-            {/* Teléfono */}
             <p className="reserva-dato mb-2">📞 {r.telefono}</p>
 
             {/* Detalles: fecha, hora, personas, mesa */}
@@ -344,7 +340,6 @@ function AdminReservas({ vistaAdmin, setVistaAdmin, onLogout, onVolver  }) {
       <CompFooter />
     </footer>
 
-      {/*  BARRA DE NAVEGACIÓN INFERIOR  */}
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
 
     </div>

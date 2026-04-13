@@ -8,7 +8,6 @@ import CompFooter from "../../Componentes/CompFooter";
 
 function ClienteReservas({ vistaCliente, setVistaCliente, onLogout, reservas, setReservas }) {
 
-  // Trae el tema actual igual que en los demás componentes
   const { tema, cambiarTema } = useTema();
 
   // Controla si se muestra el modal de nueva reserva
@@ -27,11 +26,10 @@ function ClienteReservas({ vistaCliente, setVistaCliente, onLogout, reservas, se
   });
 
   // Oculta el mensaje automáticamente en 2 segundos
-  // mismo patrón useEffect con límite de CompHooks
   useEffect(() => {
     if (mensaje) {
       const timer = setTimeout(() => setMensaje(""), 2000);
-      // Libera memoria igual que CompHooks
+      // Libera memoria
       return () => clearTimeout(timer);
     }
   }, [mensaje]);
@@ -206,7 +204,6 @@ function ClienteReservas({ vistaCliente, setVistaCliente, onLogout, reservas, se
         )}
 
         {/* SECTION LISTA DE RESERVAS */}
-        {/* Mostramos cada reserva individualmente sin .map */}
         <section>
           {reservas[0] && <TarjetaReserva r={reservas[0]} />}
           {reservas[1] && <TarjetaReserva r={reservas[1]} />}

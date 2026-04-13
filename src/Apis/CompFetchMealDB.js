@@ -31,6 +31,7 @@ function CompFetchMealDB() {
       );
       const data = await res.json();
 
+      
       if (!data.meals) {
       throw new Error("Receta no encontrada");
     }

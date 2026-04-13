@@ -5,7 +5,7 @@ import CompNavBar from "../../Componentes/CompNavBar";
 import CompFooter from "../../Componentes/CompFooter";
 import CompFetchReniec from "../../Apis/CompFetchReniec";
 import CompAxiosReniec from "../../Apis/CompAxiosReniec";
-// Datos simulados de los pedidos recientes del restaurante
+// Datos de los pedidos recientes del restaurante
 const pedidosRecientes = [
   { id: "001", mesa: 5,  descripcion: "Ceviche Clásico, Chicha Morada",  total: 43, estado: "En Preparación", timer: 300 },
   { id: "002", mesa: 8,  descripcion: "Lomo Saltado x2, Pisco Sour",    total: 82, estado: "Listo" },
@@ -36,7 +36,6 @@ function AdminPanel({ onLogout, vistaAdmin, setVistaAdmin, onVolver   }) {
     // Contenedor principal — clase CSS maneja el paddingBottom
     <div className={`admin-contenedor ${tema}`}>
 
-      {/* Header rojo superior */}
      <header className="admin-header d-flex justify-content-between align-items-center">
 
         {/* LADO IZQUIERDO: botón volver + título */}
@@ -81,10 +80,6 @@ function AdminPanel({ onLogout, vistaAdmin, setVistaAdmin, onVolver   }) {
 
       </header>
         
-
-
-  
-
                 {/*  TARJETAS DE MÉTRICAS */}
           <div className="row g-3 mb-3">
 
@@ -211,7 +206,6 @@ function AdminPanel({ onLogout, vistaAdmin, setVistaAdmin, onVolver   }) {
     <footer>
       <CompFooter />
     </footer>
-          {/*BARRA DE NAVEGACIÓN INFERIOR  */}
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
       </div>
       

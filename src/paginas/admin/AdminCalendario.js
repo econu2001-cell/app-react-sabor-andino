@@ -4,7 +4,7 @@ import CompNavBar from "../../Componentes/CompNavBar";
 import { useTema } from "../../Contex/ContexTema";
 import CompFooter from "../../Componentes/CompFooter";
 
-// Reservas simuladas con día del mes como clave
+// Reservas simuladas con día del mes
 const reservasIniciales = {
   15: { cliente: "María González", telefono: "987654321", fecha: "Domingo, 15 de marzo", hora: "19:00", personas: 5, mesa: 2, tipo: "presencial", estado: "Confirmada" },
   21: { cliente: "Luis Martínez",  telefono: "987654321", fecha: "Viernes, 21 de marzo",  hora: "20:00", personas: 3, mesa: 4, tipo: "telefono",   estado: "Pendiente"  },
@@ -68,7 +68,7 @@ function AdminCalendario({ vistaAdmin, setVistaAdmin, onLogout, onVolver }) {
     if (reservas[dia]) {
       setMostrarReserva(true);
     } else {
-      // Pre-llena la fecha en el formulario
+      // llena la fecha en el formulario
       setFormNueva({
         cliente: "", telefono: "",
         fecha: `${dia}/03/2026`,
@@ -522,7 +522,6 @@ function AdminCalendario({ vistaAdmin, setVistaAdmin, onLogout, onVolver }) {
         <CompFooter />
       </footer>
 
-      {/*  BARRA DE NAVEGACIÓN INFERIOR  */}
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
 
     </div>

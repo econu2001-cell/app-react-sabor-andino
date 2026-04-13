@@ -5,7 +5,7 @@ import { useTema } from "../../Contex/ContexTema";
 import CompNavBar from "../../Componentes/CompNavBar";
 import CompFooter from "../../Componentes/CompFooter";
 
-// Datos simulados de los pedidos del restaurante
+// Datos de los pedidos del restaurante
 const pedidosIniciales = [
   {
     id: "001", mesa: 5, cliente: "Juan Pérez", hora: "18:30",
@@ -254,7 +254,7 @@ function AdminPedidos({ onVolver, vistaAdmin, setVistaAdmin, onLogout }) {
       <footer>
        <CompFooter />
         </footer>
-        {/* BARRA DE NAVEGACIÓN INFERIOR */}
+  
       <CompNavBar vistaAdmin={vistaAdmin} setVistaAdmin={setVistaAdmin} />
             
     </div>

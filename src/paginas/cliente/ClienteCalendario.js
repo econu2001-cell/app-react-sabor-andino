@@ -20,7 +20,6 @@ const inicioPorMes = [4, 0, 0, 3, 5, 1, 3, 6, 2, 4, 0, 2];
 
 function ClienteCalendario({ vistaCliente, setVistaCliente, onLogout, reservas, setReservas }) {
 
-  // Trae el tema actual
   const { tema, cambiarTema } = useTema();
 
   // Mes actual que se muestra — empieza en marzo (índice 2)
@@ -83,20 +82,20 @@ function ClienteCalendario({ vistaCliente, setVistaCliente, onLogout, reservas, 
     if (!dia) return;
     setDiaSeleccionado(dia);
 
-    // Si el día tiene reserva del restaurante → muestra aviso
+    // Si el día tiene reserva del restaurante muestra aviso
     if (mesActual === 2 && reservasRestaurante.includes(dia)) {
       setMostrarOcupado(true);
       return;
     }
 
-    // Si el cliente tiene una reserva en ese día → muestra su reserva
+    // Si el cliente tiene una reserva en ese día muestra su reserva
     const miReserva = buscarMiReserva(dia);
     if (miReserva) {
       setMostrarMiReserva(true);
       return;
     }
 
-    // Si el día está libre → abre formulario con fecha pre-llenada
+    // Si el día está libre  abre formulario con fecha pre-llenada
     setForm({
       cliente: "", telefono: "",
       fecha: `${dia}/${String(mesActual + 1).padStart(2, "0")}/2026`,
@@ -526,7 +525,6 @@ function ClienteCalendario({ vistaCliente, setVistaCliente, onLogout, reservas, 
         <CompFooter />
         </footer>
 
-      {/*  BARRA DE NAVEGACIÓN INFERIOR  */}
       <CompNavBar vistaAdmin={vistaCliente} setVistaAdmin={setVistaCliente} esCliente={true}
       />
 

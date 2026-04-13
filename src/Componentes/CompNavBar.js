@@ -1,7 +1,5 @@
 import React from "react";
 
-// Recibe vistaAdmin (vista activa) y setVistaAdmin (para cambiar de vista)
-// igual que los demás componentes reciben props desde App.js
 function CompNavBar({ vistaAdmin, setVistaAdmin, esCliente }) {
 
    // Botones del panel admin
